@@ -10,6 +10,7 @@
     font-size: 14px;
 }
 
+/* Основной бар — полностью прозрачный */
 #waybar {
     background: transparent;
 }
@@ -30,7 +31,7 @@
 
 
 #window {
-	color: rgba (245, 255, 250, 0.6);
+	color: rgba(245, 255, 250, 0.6);
 	transition: color 0.2s ease;
 }
 
@@ -39,12 +40,13 @@
 }
 
 .modules-right {
-	background: rgba(30, 30, 46, 1);
+	background: rgba(0, 0, 0, 0.7);
 	border-radius: 152px;
-	padding: 5px 12px;
+	padding: 7px 12px;
 }
 
 
+#tray,
 #clock,
 #battery,
 #pulseaudio,
@@ -52,11 +54,11 @@
 #cpu,
 #temperature,
 #backlight,
-#tray,
 #custom-power,
-#power-profiles-daemon
+#power-profiles-daemon,
+#bluetooth
 {
-	color: blanchedalmond;
+	color: bisque;
 	padding: 0 7px;
 }
 

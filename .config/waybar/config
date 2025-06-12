@@ -9,9 +9,6 @@
     "modules-left": [
  	"hyprland/workspaces"
     ],
-    "modules-center": [
-	"hyprland/window",
-    ],
     "modules-right": [
     	"clock",
 	"battery",
@@ -20,7 +17,6 @@
         "network",
         "cpu",
         "temperature",
-        "backlight",
         "tray",
     ],
      
@@ -100,7 +96,7 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": " {format_source}",
@@ -117,12 +113,5 @@
         },
         "on-click": "pavucontrol"
     },
-
-    "custom/power": {
-        "format" : "⏻ ",
-  	"tooltip": false,
- 	"menu": "on-click",
-  	"on-click": "wlogout"
-  }
     }
 }
