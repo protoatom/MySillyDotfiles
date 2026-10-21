@@ -1,0 +1,92 @@
+(defpoll time
+  :interval "1s"
+  `date '+%H:%M'`
+)
+
+(defpoll battery_capacity
+  :interval "10s"
+  `/home/sharky/.config/eww/scripts/battery.sh`
+)
+
+(defpoll wifi_json
+  :interval "5s"
+  `~/.config/eww/scripts/wifi.sh`
+)
+
+
+(defwidget wifi []
+  (box
+    :class "wifi"
+    (label :text "${wifi_json.icon}")
+  )
+)
+
+(defwidget battery []
+  (box
+    :class "battery ${battery_capacity.state}"
+    (label :text "${battery_capacity.icon}")
+  )
+)
+
+(defwidget menu []
+  (box
+    :class "menu"
+    (label :text "󰣨")
+  )
+)
+
+(defwidget left-side []
+  (box
+    :class "left-side"
+    :halign "start"
+    :margin-left 10
+    (menu)
+  )
+)
+
+
+(defwidget center-side []
+  (box
+    :class "center-side"
+    :halign "center"
+    (label :text time)
+  )
+)
+
+
+(defwidget right-side []
+  (box
+    :class "right-side"
+    :halign "end"
+    (wifi)
+    (battery)
+  )
+)
+
+
+(defwidget bar-content []
+  (centerbox
+    :class "bar"
+    :orientation "h"
+
+    (left-side)
+    (center-side)
+    (right-side)
+  )
+)
+
+(defwindow bar
+  :monitor 0
+  :geometry (geometry
+    :x "0%"
+    :y "3px"
+    :width "80%"
+    :height "40px"
+    :anchor "top center"
+  )
+  :stacking "fg"
+  :exclusive true
+  :focusable false
+
+  (bar-content)
+)
