@@ -1,0 +1,56 @@
+.left-side {
+    margin: 0px 0px 0px 5px;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+}
+.right-side {
+    margin: 3px 3px 3px 0;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+}
+
+.center-side {
+    margin: 3px 3px 3px 0;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+}
+
+.menu {
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+    padding-right: 25px;
+    color: blanchedalmond;
+}
+
+.bar {
+    background-color: rgba(17, 17, 27, 0.5);
+    border-radius: 10px;
+
+    font-family: "Firacode";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+
+.battery {
+  color: #a6e3a1;
+}
+
+.battery.low {
+  color: #f9e2af;
+}
+
+.battery.critical {
+  color: #f38ba8;
+}
+
+.battery.charging {
+  color: #94e2d5;
+}
+
+.wifi {
+    margin-right: 10px;
+}
